@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Jacob Daigle">
+    <meta name="keywords" content="Daigle, portfolio, resume, CV, python, machine learning, data science">
+    <meta name="author" content="Jacob Daigle">
+    <title>Jacob Daigle</title>
+    <link rel="icon" href="images/cube.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="myScript.js"></script>
+</head>
+<body id="portfolio-page">
+    <nav id="navBar">
+        <div class="name"><a href="home.html">JACOB DAIGLE</a></div>
+        <div class="navLink navStart"><a href="home.html" id="current-li">HOME</a></div>
+        <div class="navLink dropdown">
+            <a  href="portfolio.html">PORTFOLIO</a>
+            <div class="dropdown-content">
+                <div><a href="data-analysis.html">Data Analysis</a><br></div>
+                <div><a href="game-design.html">Game Design</a><br></div>
+                <div><a href="machine-learning.html">Machine Learning</a><br></div>
+                <div><a href="web-design.html">Website Design</a><br></div>
+            </div>
+        </div>
+        <div class="navLink"><a  href="resume.html">RESUME</a></div>
+        <div class="navLink"><a  href="about.html">ABOUT</a></div>
+    </nav>
+
+    <h1 class="title">MY PORTFOLIO</h1>
+
+    <div class="portfolio-display">
+        <div class="portfolio-pic-label">
+            <a href="data-analysis.html"><img class="portfolio-icon" src="images/squirrels/squirrel_pic.jpg" alt=""></a>
+            <img class="label-right" src="images/text/data_label.png" alt="">
+        </div>
+        <div class="portfolio-pic-label pic-label-offset">
+            <a href="game-design.html"><img class="portfolio-icon" src="images/controller.png" alt=""></a>
+            <img class="label-left" src="images/text/game_label.png" alt="">
+        </div>
+        <div class="portfolio-pic-label">
+            <a href="machine-learning.html"><img class="portfolio-icon" src="images/brain-wires.png" alt=""></a>
+            <img class="label-right" src="images/text/machine_label.png" alt="">
+        </div>
+        <div class="portfolio-pic-label pic-label-offset">
+            <a href="web-design.html"><img class="portfolio-icon" src="images/web-code.png" alt=""></a>
+            <img class="label-left" src="images/text/web_label.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

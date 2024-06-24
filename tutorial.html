@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Testing</title>
+    <link rel="icon" href="walrein.png">
+    <style>
+        p {
+            color: rgb(169, 17, 17);
+        }
+
+        a:link{
+            text-decoration: none;
+        }
+
+        a:visited {
+            color:white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: aqua;
+        }
+
+        table {
+            border: 5px solid lightblue;
+            background-color: lightblue;
+            border-style: outset;
+            /* border-collapse: collapse; */
+            width: 50%;
+        }
+        
+        th, td {
+            border: 1px solid blue;
+            border-radius: 100px;
+        }
+
+        tr {
+            border-bottom: 1px solid black;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightskyblue;
+        }
+
+        td:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body style="background-color: chartreuse;">
+    <h1 style="font-size: 30px; text-align: right; font-family: Impact; background-color: rgba(255, 92, 70, 0.134);">Heading</h1>
+    <p id="top" title="This is a tooltip!">Hover this.</p>
+    <hr>
+    <p>This is a<br>new section</p>
+    <p style="background-color: aliceblue; color: black; border: 2px solid violet;">There is <i>italic</i>, <b>bold,</b>, <em>emphasis</em>, and <strong>strong</strong>.</p>
+    <p>You can also do <small>small</small>, <mark>marked</mark>, <ins>underlined</ins>, and <del>striken</del>.</p>
+    <p>Subscripts can do H<sub>2</sub>O and superscripts for x<sup>2</sup>.</p>
+    <blockquote cite="https://www.w3schools.com/html/html_quotation_elements.asp">You can reference websites with blockquotes.</blockquote>
+    <p>Or do a little <q>in-text citation</q>.</p>
+    <p>Abbreviations like <abbr title="World Health Organization">WHO</abbr> has a tag too I guess.</p>
+    <p>Here is a really <bdo dir="rtl">interesting test.</bdo></p>
+    <address>Jake Daigle<br>Elite Coder<br><a href="mailto:jakedaigle3.14@gmail.com">Drop me a line</a><br>Tonga</address>
+    <p style="border: 2px dashed black; padding: 1px; margin-left: 100px; background-image: url('cat.jpg');background-size: 5%;">
+        I love to cite <cite>Shakespeare.</cite>
+    </p>
+    <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">Where I learned this from.</a>
+    <p>need<br>a<br>few<br>more<br>lines<br>then<br>we<br>link to something else
+        <img usemap="#eyes" title="click the eye" src="cat.jpg" alt="this should be a cat" style="float:left;width:10%;">
+        <map name="eyes">
+            <area shape="circle" coords="60, 70, 5" href="#top">
+        </map>
+    </p>
+
+    <table>
+        <caption>Table 1.0</caption>
+        <tr>
+            <th colspan="3">Multi-column</th>
+        </tr>
+        <tr>
+            <th>Column 1</th>
+            <th style="width: 20%">Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>data A</td>
+            <td>data B</td>
+            <td>data C</td>
+        </tr>
+        <tr>
+            <td>data D</td>
+            <td>data E</td>
+            <td>data F</td>
+        </tr>
+    </table>
+    <ul style="list-style-type:none;margin:0;padding:0;overflow:hidden">
+        <li style="float:left;padding:10px">Item 1</li>
+        <li style="float:left;padding:10px">Item 2</li>
+        <li style="float:left;padding:10px">Item 3</li>
+    </ul>
+
+    <button type="button" onclick="changer()">test</button>
+    <button type="button" onclick="popout()">pop</button>
+    <button type="button" onclick="this.innerHTML = Date()">time</button>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Jacob Daigle">
+    <meta name="keywords" content="Daigle, portfolio, resume, CV, python, machine learning, data science">
+    <meta name="author" content="Jacob Daigle">
+    <title>Jacob Daigle</title>
+    <link rel="icon" href="images/cube.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="myScript.js"></script>
+</head>
+<body id="portfolio-page">
+    <nav id="navBar">
+        <div class="name"><a href="home.html">JACOB DAIGLE</a></div>
+        <div class="navLink navStart"><a href="home.html" id="current-li">HOME</a></div>
+        <div class="navLink dropdown">
+            <a  href="portfolio.html">PORTFOLIO</a>
+            <div class="dropdown-content">
+                <div><a href="data-analysis.html">Data Analysis</a><br></div>
+                <div><a href="game-design.html">Game Design</a><br></div>
+                <div><a href="machine-learning.html">Machine Learning</a><br></div>
+                <div><a href="web-design.html">Website Design</a><br></div>
+            </div>
+        </div>
+        <div class="navLink"><a  href="resume.html">RESUME</a></div>
+        <div class="navLink"><a  href="about.html">ABOUT</a></div>
+    </nav>
+
+    <h1 class="title">MY PORTFOLIO <hr></h1>
+
+    <h2 class="title">DATA ANALYSIS</h2> <!-- ----------------------------------------------------------------------- -->
+
+        <div class="slide-container">
+
+        <img id="leftButton" src="images/arrow_left.png" alt="Left">
+
+        <div class="grandparent" id="scrollingBox">
+            <div class="parent">
+                <div class="child">
+                    <div class="">
+                        <h2 style="text-align: center;">
+                            2018 NYC Central Park<br>Squirrel Census
+                        </h2>
+
+                        <p>
+                            I've analyzed data from the
+                            <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29"></a>2018 NYC Squirrel Census.
+                            I've cleaned, formatted, organized, and sorted the data using <a href="https://pandas.pydata.org/docs/#">Pandas</a>, and made
+                            all of the graphs using <a href="https://matplotlib.org/stable/api/index.html">MatPlotLib</a>.
+                        </p>
+                    </div>
+
+                    <img class="chart" style="width: 100%; border-radius: 20%;" src="images/squirrels/squirrel_pic.jpg" alt="Image of a squirrel.">
+                </div>
+
+                <div class="child">
+                    <img class="chart" src="images/squirrels/location.png" alt="">
+
+                    <p style="margin-left: 10%;">
+                        In recording the sightings, census takers noted the precise latitude and longitude the squirrels were spotted at
+                        (or perhaps rather where the observer was located). This is a heatmap of that data, or more specifically, a 2D-histogram.
+                        Brighter regions of course indicate that there were many spottings in a close vicinity to the location, and darker indicate 
+                        there were few or none. I think it's fascinating that just from a handful of squirrel spottings, we can clearly make out
+                        where the lakes and buildings are, as no squirrels can be spotted there.
+                    </p>
+                </div>
+
+                <div class="child">
+                    <img class="chart" src="images/squirrels/sightings.png" alt="">
+
+                    <p>
+                        A simple bar plot of the number of recorder sightings over the month the census took place. Interesting to note that
+                        on the 13th, over 400 sightings were recorded!
+                    </p>
+                </div>
+
+                <div class="child">
+                    <img class="chart" src="images/squirrels/trees.png" alt="">
+
+                    <p>
+                        Here I've made a scatterplot of the latitude and longitude of all squirrel sightings in which the census taker included
+                        the words "tree" in their extra notes (including variants like "trees", "Tree", etc.). It's not particularly interesting 
+                        for this particular dataset, as it communicates relatively the same information as the heatmap, but with different animals 
+                        or different study area, or a much larger data set, filtering notes like this could be more informative as it could show us 
+                        how tree density relates to where the animal spends its time, locational preference, or just help to understand the arragement
+                        and density of different flora.
+                    </p>
+                </div>
+
+                <div class="child">
+                    <img class="chart" src="images/squirrels/colours.png" alt="">
+
+                    <p>
+                        Census takers also recorded the primary and highlight fur colors of the squirrels they spotted. Here are some pie charts
+                        showing relative proportions.
+                    </p>
+                </div>
+
+                <div class="child">
+                    <img class="chart" id="foo4" src="images/squirrels/heights.png" alt="">
+
+                    <p>
+                        Another take on the latitude/longitude plot, but this time a scatterplot where the data points are colored according to
+                        the height the squirrel was spotted at. It's not really for picking out invidivual spotting heights, but rather to see
+                        a heightmap of the landscape, showing us where the tallest trees (presumably) are, and also making obvious that the vast 
+                        vast majority of squirrels were spotted on the ground or very close.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <img id="rightButton" src="images/arrow_right.png" alt="Left">
+
+    </div>
+
+    <div class="writeup">
+        <p>
+            I've always found statistics interesting and I enjoy making graphs and mathematical models, as well as just organizing things
+            in general. My general interest combined with the fact that I'll be studying 
+            <a href="https://www.lunduniversity.lu.se/lubas/i-uoh-lu-NABIF/18010">bioinformatics at Lund University</a> in the fall has inaugurated
+            my learning of data analysis. I have begun self-taught but may still take courses online before the school semester starts. In any case,
+            I'll be putting projects I do on display here as I go forward.
+        </p>
+    </div>
+</body>
+</html>

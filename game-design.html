@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Jacob Daigle">
+    <meta name="keywords" content="Daigle, portfolio, resume, CV, python, machine learning, data science">
+    <meta name="author" content="Jacob Daigle">
+    <title>Jacob Daigle</title>
+    <link rel="icon" href="images/cube.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="myScript.js"></script>
+</head>
+<body id="portfolio-page">
+    <nav id="navBar">
+        <div class="name"><a href="home.html">JACOB DAIGLE</a></div>
+        <div class="navLink navStart"><a href="home.html" id="current-li">HOME</a></div>
+        <div class="navLink dropdown">
+            <a  href="portfolio.html">PORTFOLIO</a>
+            <div class="dropdown-content">
+                <div><a href="data-analysis.html">Data Analysis</a><br></div>
+                <div><a href="game-design.html">Game Design</a><br></div>
+                <div><a href="machine-learning.html">Machine Learning</a><br></div>
+                <div><a href="web-design.html">Website Design</a><br></div>
+            </div>
+        </div>
+        <div class="navLink"><a  href="resume.html">RESUME</a></div>
+        <div class="navLink"><a  href="about.html">ABOUT</a></div>
+    </nav>
+
+    <h1 class="title">MY PORTFOLIO <hr></h1>
+
+    <h2 class="title">GAME DESIGN</h2> <!-- ----------------------------------------------------------------------- -->
+    <div class="charts block">
+        <div class="chart-text">
+            <p>
+                This is a replica of the classic arcade game "Snake" I made. It's nothing too crazy but I was able to learn how to use a
+                game-engine I had never worked with, <a href="https://www.pygame.org/news">PyGame</a>, as well as some fundamentals of game-design like collision detection, grid-based 
+                movement and offsets, time-deltas and framerate, player input, and playing sounds.
+            </p>
+        </div>
+        <video controls><source src="snake-demo.mp4" type="video/mp4"></video>
+    </div>
+
+   
+</body>
+</html>
