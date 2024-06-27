@@ -123,11 +123,13 @@ p a {
 
 #homelinks {
     display: flex;
+    width: 20vw;
     justify-content: space-between;
     list-style: none;
-    overflow: hidden;
-    margin: 0 39%;
-    padding: 0.5% 0;
+    margin: 0 auto;
+    padding: 1% 0;
+    white-space: nowrap;
+    flex-wrap: wrap;
 }
 
 #homelinks a {
@@ -146,8 +148,9 @@ p a {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
     background-color: rgb(57, 134, 230);
-    position: sticky;
+    position: relative;
     top: 0;
+    width: 100vw;
     z-index: 1;
 }
 
@@ -207,6 +210,7 @@ p a {
 }
 
 .name a {
+    float:left;
     color: white;
     text-decoration: none;
 }
