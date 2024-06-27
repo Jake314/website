@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
-<body id="portfolio-page">
+<body id="machine-learning-page">
     <nav id="navBar">
         <div class="name"><a href="index.html">JACOB DAIGLE</a></div>
         <div class="navLink navStart"><a href="index.html" id="current-li">HOME</a></div>
@@ -50,11 +50,11 @@
             of the training data, 500 iterations of gradient descent, 0.1 learning rate, and ReLU as an activation function. As seen on the right, the average
             prediction accuracies on the training and testing data are 91% and 81% respectively.
         </p>
-        <img src="images/ANN/initial_accuracies.png" alt="Data plot" class="chart">
+        <img src="images/ANN/initial_accuracies.png" alt="Data plot" class="machine-learning-chart">
 
         <div>
-            <img src="images/ANN/train_and_iter1.png" alt="Graph showing accuracy when varying iterations and training sample size up to 10k" class="chart sbs">
-            <img src="images/ANN/train_and_iter2.png" alt="Graph showing accuracy when varying iterations and training sample size up to 10k" class="chart sbs">
+            <img src="images/ANN/train_and_iter1.png" alt="Graph showing accuracy when varying iterations and training sample size up to 10k" class="machine-learning-chart sbs">
+            <img src="images/ANN/train_and_iter2.png" alt="Graph showing accuracy when varying iterations and training sample size up to 10k" class="machine-learning-chart sbs">
         </div>
         <p class="chart-text">
             I then ran another series of trials varying the number of iterations of gradient descent, as well as the size of the training data subset. We find, pretty
@@ -71,11 +71,11 @@
             indeed a "tipping point" around 0.04. I also tested 0.9 to 0.99 in a similar fashion but found similar output to the first test.
         </p>
         <div>
-            <img src="images/ANN/learning_rates.png" alt="Learning rate comparison." class="chart">
-            <img src="images/ANN/learning_rates2.png" alt="Learning rate comparison." class="chart">
+            <img src="images/ANN/learning_rates.png" alt="Learning rate comparison." class="machine-learning-chart">
+            <img src="images/ANN/learning_rates2.png" alt="Learning rate comparison." class="machine-learning-chart">
         </div>
 
-        <img class="chart" style="margin: auto 0 auto auto;" src="images/ANN/generations.png" alt="Generation count comparison.">
+        <img class="machine-learning-chart" style="margin: auto 0 auto auto;" src="images/ANN/generations.png" alt="Generation count comparison.">
         <div class="chart-text">
             <p>
                 However, since smaller learning rates require more generations,
@@ -96,11 +96,11 @@
             </p>
         </div>
         <div>
-            <img class="chart" src="images/ANN/twolayer_train_and_iter2.png" alt="Performance graph of two hidden layers.">
-            <img class="chart" src="images/ANN/threelayers.png" alt="Performance graph of three hidden layers.">
+            <img class="machine-learning-chart" src="images/ANN/twolayer_train_and_iter2.png" alt="Performance graph of two hidden layers.">
+            <img class="machine-learning-chart" src="images/ANN/threelayers.png" alt="Performance graph of three hidden layers.">
         </div>
 
-        <img class="chart" style="margin: auto 0 auto auto;" src="images/ANN/threelayer_generations.png" alt="">
+        <img class="machine-learning-chart" style="margin: auto 0 auto auto;" src="images/ANN/threelayer_generations.png" alt="">
         <div>
             <p>
                 Since previous trials seem to show similar performance with training data samples of 2500 and 40000, I went with 2500, a learning rate of 0.1, and then
@@ -109,7 +109,16 @@
                 count, the results could be due to small sample size, but computation time was getting long. I'll return to this experiment to get a larger sample.
             </p>
         </div>
+    </div>
 
+    <div class="writeup">
+        <p>
+            AI is exploding as a subject of interest right now for many people, and I'm no exception. It seems there's a lot of potential for AI
+            in many fields, and I figured what better way to start than learning the math behind it! I personally feel the better I understand the
+            theory, the more I'll be able to cater any AI I work on to the specific task at hand. To me, the most interesting application of AI
+            is finding optimal strategies and solutions. This can look like anything from finding the best way to win at a game, to finding the best
+            way to pack objects in a confined space. I love efficiency and optimization, and want to develop AI that explores this.
+        </p>
     </div>
 </body>
 </html>

@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
-<body id="portfolio-page">
+<body id="data-analysis-page">
     <nav id="navBar">
         <div class="name"><a href="index.html">JACOB DAIGLE</a></div>
         <div class="navLink navStart"><a href="index.html" id="current-li">HOME</a></div>
@@ -47,17 +47,17 @@
 
                         <p>
                             I've analyzed data from the
-                            <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29"></a>2018 NYC Squirrel Census.
+                            <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29">2018 NYC Squirrel Census</a>.
                             I've cleaned, formatted, organized, and sorted the data using <a href="https://pandas.pydata.org/docs/#">Pandas</a>, and made
                             all of the graphs using <a href="https://matplotlib.org/stable/api/index.html">MatPlotLib</a>.
                         </p>
                     </div>
 
-                    <img class="chart" style="width: 100%; border-radius: 20%;" src="images/squirrels/squirrel_pic.jpg" alt="Image of a squirrel.">
+                    <img class="data-analysis-chart" style="width: 100%; border-radius: 20%;" src="images/squirrels/squirrel_pic.jpg" alt="Image of a squirrel.">
                 </div>
 
                 <div class="child">
-                    <img class="chart" src="images/squirrels/location.png" alt="">
+                    <img class="data-analysis-chart" src="images/squirrels/location.png" alt="">
 
                     <p style="margin-left: 10%;">
                         In recording the sightings, census takers noted the precise latitude and longitude the squirrels were spotted at
@@ -69,16 +69,19 @@
                 </div>
 
                 <div class="child">
-                    <img class="chart" src="images/squirrels/sightings.png" alt="">
+                    <img class="data-analysis-chart" src="images/squirrels/sightings.png" alt="">
 
                     <p>
-                        A simple bar plot of the number of recorder sightings over the month the census took place. Interesting to note that
-                        on the 13th, over 400 sightings were recorded!
+                        A bar plot of the number of recorder sightings over the month the census took place. Interesting to note that
+                        on the 13th, over 400 sightings were recorded! This sort of data is useful in examining possible biases in the analysis
+                        of the data. If, for example, sightings were only recorded on a specific day of the week, they could be influenced by
+                        regular traffic events - for example the park is probably busier on a Saturday than a Monday, and this could influence
+                        how/when squirrels are spotted and what they're doing.
                     </p>
                 </div>
 
                 <div class="child">
-                    <img class="chart" src="images/squirrels/trees.png" alt="">
+                    <img class="data-analysis-chart" src="images/squirrels/trees.png" alt="">
 
                     <p>
                         Here I've made a scatterplot of the latitude and longitude of all squirrel sightings in which the census taker included
@@ -91,19 +94,21 @@
                 </div>
 
                 <div class="child">
-                    <img class="chart" src="images/squirrels/colours.png" alt="">
+                    <img class="data-analysis-chart" src="images/squirrels/colours.png" alt="">
 
                     <p>
-                        Census takers also recorded the primary and highlight fur colors of the squirrels they spotted. Here are some pie charts
-                        showing relative proportions.
+                        Pie charts showing relative proportions of primary (main) and secondary (highlight) fur colours. This sort of analysis
+                        is useful in studies involving genetic information, as the phenotype reflects the allele variation. This could possibly
+                        be of interest especially when paired with notes from the census takers on behaviour, particularly if observed over
+                        longer periods of time. For example, certain colours might be harder for dogs to spot but easier for cats or vice versa.
                     </p>
                 </div>
 
                 <div class="child">
-                    <img class="chart" id="foo4" src="images/squirrels/heights.png" alt="">
+                    <img class="data-analysis-chart" src="images/squirrels/heights.png" alt="">
 
                     <p>
-                        Another take on the latitude/longitude plot, but this time a scatterplot where the data points are colored according to
+                        Another take on the latitude/longitude plot, but this time a scatterplot where the data points are moved and coloured according to
                         the height the squirrel was spotted at. It's not really for picking out invidivual spotting heights, but rather to see
                         a heightmap of the landscape, showing us where the tallest trees (presumably) are, and also making obvious that the vast 
                         vast majority of squirrels were spotted on the ground or very close.

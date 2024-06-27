@@ -312,7 +312,13 @@ p a {
     text-align: justify;
 }
 
-.chart {
+.data-analysis-chart {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+}
+
+.machine-learning-chart {
     width: 49%;
     border-radius: 5px;
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
@@ -348,6 +354,25 @@ video {
 
 .writeup > p {
     padding: 30vh 3vw;
+}
+
+#web-design-page img {
+    margin: 0 10%;
+    width: 80vw;
+}
+
+.rotate-cw {
+    color: white;
+    text-align: center;
+    width: 45vw;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    background-color: skyblue;
+    position: relative;
+    left: 10%;
+    top: 67px;
+    letter-spacing: 10px;
+    font-size: 40px;
 }
 
 /* RESUME ======================================= */
