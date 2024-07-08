@@ -141,8 +141,8 @@ p a {
 }
 
 @media only screen and (max-width: 768px) {
-    #homepage p {
-        margin-top: 6vw;
+    #homepage img {
+        margin-top: 15vh;
     }
 }
 
@@ -285,27 +285,21 @@ p a {
 .portfolio-display {
     background-color: white;
     display: grid;
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 50vh 50vh;
-    row-gap: 10%;
-    padding: 2% 0 15% 0;
-    justify-items: center;
+    column-gap: 6vw;
+    row-gap: 6vw;
+    padding: 6vw;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 40vw 40vw;
     overflow: hidden;
 }
 
 /* Pic+Label combo div */
 .portfolio-pic-label {
-    width: 50vh;
-    height: 50vh;
-    max-width: 50vw;
-    max-height: 50vw;
+    width: 100%;
+    height: 100%;
     position: relative;
     display: flex;
     white-space: nowrap;
-}
-
-.pic-label-offset {
-    top: 25%;
 }
 
 /* Image */
@@ -343,6 +337,31 @@ p a {
 }
 
 @media only screen and (min-width: 768px) {
+    /* Entire grid */
+    .portfolio-display {
+        background-color: white;
+        display: grid;
+        column-gap: 24vw;
+        row-gap: 6vw;
+        padding: 1.5vw 15vw 10vw 15vw;
+        grid-template-columns: 23vw 23vw;
+        grid-template-rows: 23vw 23vw;
+        overflow: hidden;
+    }
+
+    /* Pic+Label combo div */
+    .portfolio-pic-label {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        white-space: nowrap;
+    }
+
+    .pic-label-offset {
+        top: 5vw;
+    }
+
     .portfolio-icon:hover {
         transform: scale(1.1, 1.1) rotate(8deg);
         cursor: pointer;
@@ -351,12 +370,12 @@ p a {
 
     .label-right {
         bottom: 10%;
-        left: 90%;
+        left: 80%;
     }
 
     .label-left {
         top: -10%;
-        right: 80%;
+        right: 70%;
     }
 }
 
@@ -414,6 +433,18 @@ p a {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
 }
 
+@media only screen and (max-width: 768px) {
+    .child {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .child p {
+        padding: 0;
+        overflow: auto;
+    }
+}
+
 .machine-learning-chart {
     width: 49%;
     border-radius: 5px;
@@ -426,15 +457,36 @@ p a {
     padding: 0 0vw;
 }
 
-video {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    height: auto;
-    border: 5px solid white;
-    border-radius: 5px;
-    border-style: ridge;
+/* GAME DESIGN ============= */
+    .snake-vid {
+        display: block;
+        margin: 0 auto;
+        width: 50vw;
+        border: 5px ridge white;
+        border-radius: 5px;
+    }
+
+    .snake-text {
+        width: 90%;
+        margin: 5vh auto;
+    }
+
+@media only screen and (min-width: 768px) {
+    .snake-vid {
+        display: block;
+        float: left;
+        margin: 0 2vw;
+        width: 20vw;
+    }
+
+    .snake-text {
+        width: 48%;
+        padding: 5vw;
+        float: left;
+    }
 }
+
+/* MISC ==================== */
 
 .title {
     text-align: center;
@@ -556,23 +608,39 @@ video {
 /* ABOUT ======================================= */
 #about-page p {
     padding: 3vw;
+    margin: 5%;
 }
 
 .about-gallery {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: 40vh 40vh 40vh 40vh;
-    margin: 3%;
-    grid-gap: 1vw;
+    display: block;
 }
 
 #about-page img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    margin: 0 5%;
     object-fit: cover;
     border-radius: 5%;
     transition: all linear 0.2s;
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 768px) {
+    .about-gallery {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 40vh 40vh 40vh 40vh;
+        margin: 3%;
+        grid-gap: 1vw;
+    }
+
+    #about-page img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5%;
+        transition: all linear 0.2s;
+        box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+    }
 }
 
 #about-page img:hover {
@@ -617,7 +685,6 @@ video {
 
 .about-image5 {
     grid-area: 3 / 2 / 5 / 2;
-    margin: -40% 0 0 0;
 }
 
 .about-image6 {
@@ -630,5 +697,4 @@ video {
 
 .about-image8 {
     grid-area: 1 / 2 / 3 / 2;
-    margin: 0 0 40% 0;
 }
