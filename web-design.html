@@ -25,8 +25,17 @@
                 <div><a href="web-design.html">Website Design</a><br></div>
             </div>
         </div>
-        <div class="navLink"><a  href="resume.html">RESUME</a></div>
-        <div class="navLink"><a  href="about.html">ABOUT</a></div>
+        <div class="navLink"><a href="resume.html">RESUME</a></div>
+        <div class="navLink"><a href="about.html">ABOUT</a></div>
+        <div class="mobile-dropdown" style="font-size: 30px;">
+            ≡
+            <div class="mobile-dropdown-content">
+                <div><a href="index.html">HOME</a><br></div>
+                <div><a href="portfolio.html">PORTFOLIO</a><br></div>
+                <div><a href="resume.html">RESUME</a><br></div>
+                <div><a href="about.html">ABOUT</a><br></div>
+            </div>
+        </div>
     </nav>
 
     <h1 class="title">MY PORTFOLIO <hr></h1>
@@ -35,15 +44,46 @@
     <div class="block">
         <p>
             I've coded this website entirely myself, including the HTML, CSS, and JavaScript. I have taken a
-            course in web design, but most of what I know is self-taught. I also have experience with Wix as I used it
-            to design a website for the startup I was a part of. I manage the website using GitHub.
+            course in web design, but most of what I know is self-taught. I also have experience with <a href="https://www.wix.com/">Wix</a>
+            as I used it to design a website for the startup I was a part of. I manage the website using <a href="https://github.com/">GitHub</a>.
         </p>
     </div>
-    <p class="rotate-cw">HTML</p>
-    <img src="images/web-design/html-sample.png" alt="A sample of the HTML code I wrote for this website.">
-    <p class="rotate-cw">CSS</p>
-    <img src="images/web-design/css-sample.png" alt="A sample of the CSS code I wrote for this website.">
-    <p class="rotate-cw">JavaScript</p>
-    <img src="images/web-design/javascript-sample.png" alt="A sample of the JavaScript code I wrote for this website.">
+
+    <div class="webdes-container">
+        <p class="rotate-cw">HTML</p>
+        <p class="language-explanation">
+            HTML is the language in which the content of a webpage is written. Every word, image, button, list, and link is contained in the
+            HTML of the website. The characterizing feature of HTML is the tags surrounding every element. &lta&gt and &lt&#47a&gt, for example,
+            tells the website whatever's in between will be a hyperlink to another webpage. &lth1&gt indicates a header, &ltem&gt
+            will make text italic, and so on. HTML also includes meta-data that search engines care about, like the fact this website
+            is a portfolio or it's written in English.
+            <br><br>
+            HTML starts to get more interesting when you include the &lt&#47div&gt tag, classes and id's. These three things allow you to label
+            elements or group them together to let you reference them in CSS and JavaScript.
+        </p>
+        <img src="images/web-design/html-sample.png" alt="A sample of the HTML code I wrote for this website.">
+    </div>
+
+    <div class="webdes-container">
+        <p class="rotate-cw">CSS</p>
+        <p class="language-explanation">
+            Once you have all of the content of a webpage, the next step is making it look a certain way. CSS is how one can change stylistic
+            elements like colours, borders, empty space, opacity, size, and more. CSS is much more powerful than just colouring some text, though.
+            It can also be used to change style on actions like hover or click, leading to animations like the one when this text appeared. There
+            are some really interesting capabilities, but probably one of the simplest but hardest things CSS is used for is rearranging and
+            rescaling everything so the website looks good no matter what size screen it's displayed on.
+        </p>
+        <img src="images/web-design/css-sample.png" alt="A sample of the CSS code I wrote for this website.">
+    </div>
+
+    <div class="webdes-container">
+        <p class="rotate-cw">JavaScript</p>
+        <p class="language-explanation">
+            At the end of the day, there's only so much functionality CSS can give to a website. If one wants more control over the functionality
+            of a website, JavaScript is the answer. It can also control simple things like changing style, and animating things, but can also
+            bring much more complex functionality like interactive elements or real-time updating of information.
+        </p>
+        <img src="images/web-design/javascript-sample.png" alt="A sample of the JavaScript code I wrote for this website.">
+    </div>
 </body>
 </html>

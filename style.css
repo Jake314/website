@@ -96,10 +96,10 @@ p a {
 
 #homepage img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10vw;
-    width: 10%;
+    margin: 0 auto;
+    margin-top: 5vw;
+    width: 15vw;
+    min-width: 150px;
 }
 
 #homepage h1 {
@@ -109,7 +109,6 @@ p a {
     text-align: center;
     margin: 1vw auto 0 auto;
     padding: 5px 10px 5px 10px;
-    /* background-color: rgba(0, 0, 0, 0.4); */
 }
 
 #homepage p {
@@ -117,13 +116,12 @@ p a {
     color: white;
     text-align: center;
     margin: 0 auto 1vw auto;
-    padding: 0 10px;
-    /* background-color: rgba(0, 0, 0, 0.4); */
+    text-shadow: 2px 2px 2px black;
 }
 
 #homelinks {
     display: flex;
-    width: 20vw;
+    width: 300px;
     justify-content: space-between;
     list-style: none;
     margin: 0 auto;
@@ -142,6 +140,12 @@ p a {
     border-radius: 50px;
 }
 
+@media only screen and (max-width: 768px) {
+    #homepage p {
+        margin-top: 6vw;
+    }
+}
+
 /* NAV BAR ======================================= */
 
 #navBar {
@@ -155,52 +159,112 @@ p a {
 }
 
 .navLink {
+    display: none;
+}
+    
+.navStart {
+    grid-column: 8;
+}
+
+.mobile-dropdown {
     display: flex;
-    justify-content: center;
+    color: white;
+    position: relative;
+    grid-column: 12;
     align-items: center;
 }
-
-.navLink a {
-    color: white;
-    text-decoration: none;
-}
-
-.navLink:hover {
-    background-color: rgb(47, 124, 220);
-    /* font-size: 1.1em; */
-}
-
-.dropdown {
-    position: relative;
-}
   
-.dropdown-content {
-    display: none;
+.mobile-dropdown-content {
+    opacity: 0;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     background-color: rgb(57, 134, 230);
-    width: 110%;
-    overflow: auto;
+    overflow: hidden;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
     z-index: 1;
-}
-  
-.dropdown:hover .dropdown-content {
-    display: block;
+    transition: 0.5s;
+    white-space: nowrap;
 }
 
-.dropdown-content > div:hover {
+.mobile-dropdown:hover .mobile-dropdown-content {
+    opacity: 1;
+}
+
+.mobile-dropdown-content > div:hover {
     background-color: rgb(47, 124, 220);
     transition: all linear 0.3s;
 }
 
-.dropdown-content > div > a {
-    padding: 0 10%;
+.mobile-dropdown-content a {
+    font-size: small;
+    color: white;
+    text-decoration: none;
+    padding: 0 3vw;
+    vertical-align: middle;
 }
 
-.navStart {
-    grid-column: 9;
+@media only screen and (min-width: 768px) {
+    .navLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    .navLink a {
+        display: inline;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .navLink:hover {
+        background-color: rgb(47, 124, 220);    
+    }
+
+    .mobile-dropdown {
+        grid-column: 8;
+        grid-row: 1;
+        display: none;
+    }
+
+    .mobile-dropdown-content {
+        left: 100%;
+    }
+    
+    .dropdown {
+        position: relative;
+    }
+      
+    .dropdown-content {
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(57, 134, 230);
+        overflow: hidden;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+        z-index: 1;
+        transition: 0.5s;
+        white-space: nowrap;
+    }
+
+    .dropdown:hover .dropdown-content {
+        opacity: 1;
+    }
+    
+    .dropdown-content > div:hover {
+        background-color: rgb(47, 124, 220);
+        transition: all linear 0.3s;
+    }
+    
+    .dropdown-content > div > a {
+        padding: 0 2vw;
+    }
+    
+    .navStart {
+        grid-column: 9;
+    }
 }
 
 .name {
@@ -325,7 +389,6 @@ p a {
     grid-template-columns: 50% 50%;
     align-items: center;
     text-align: justify;
-    /* border: 2px dashed black; */
 }
 
 .child > img {
@@ -389,23 +452,48 @@ video {
     padding: 30vh 3vw;
 }
 
-#web-design-page img {
-    margin: 0 10%;
+/* Web Design pics */
+.webdes-container {
+    position: relative;
+    top: 0;
     width: 80vw;
+    margin: 0 auto 0 max(10vw, 60px);
+}
+
+#web-design-page img {
+    width: 100%; 
 }
 
 .rotate-cw {
     color: white;
     text-align: center;
     width: 45vw;
-    transform-origin: 0 0;
     transform: rotate(90deg);
+    transform-origin: 0 0;
     background-color: skyblue;
-    position: relative;
-    left: 10%;
-    top: 67px;
-    letter-spacing: 10px;
-    font-size: 40px;
+    position: absolute;
+    top: 0; left: 0;
+    letter-spacing: 8px;
+    font-size: min(5vw, 40px);
+}
+
+.language-explanation {
+    color: white;
+    position: absolute;
+    top: 0; left: 0;
+    transform: translate(-100%, 0);
+    transition: all ease 0.7s;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1.8vw;
+    width: 73.9vw;
+    height: 39vw;
+    padding: 3vw;
+    opacity: 0;
+}
+
+.language-explanation:active {
+    transform: rotate(0deg);
+    opacity: 1;
 }
 
 /* RESUME ======================================= */
@@ -470,35 +558,77 @@ video {
     padding: 3vw;
 }
 
+.about-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 40vh 40vh 40vh 40vh;
+    margin: 3%;
+    grid-gap: 1vw;
+}
+
 #about-page img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5%;
     transition: all linear 0.2s;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 #about-page img:hover {
     filter: brightness(0.3);
 }
 
-.about-image-with-text {
+[class*=about-image] {
     position: relative;
-    float: left;
-    overflow: hidden;
-    width: 30vw;
-    padding: 3vh 1.3vw;
-    height: 100vh;
     color: rgba(255,255,255,0);
     transition: all linear 0.2s;
 }
 
-.about-image-with-text:hover {
+[class*=about-image]:hover {
     color: rgba(255,255,255,0.8);
 }
 
-.about-image-with-text > p {
+[class*=about-image] > p {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+[class*=about-image] {
+    position: relative;
+}
+
+.about-image1 {
+    grid-area: 3 / 3 / 5 / 3;
+}
+
+.about-image2 {
+    grid-area: 3 / 1 / 5 / 1;
+}
+
+.about-image3 {
+    grid-area: 2 / 3 / 2 / 3
+}
+
+.about-image4 {
+    grid-area: 2 / 4 / 4 / 4
+}
+
+.about-image5 {
+    grid-area: 3 / 2 / 5 / 2;
+    margin: -40% 0 0 0;
+}
+
+.about-image6 {
+    grid-area: 1 / 3 / 1 / 5
+}
+
+.about-image7 {
+    grid-area: 1 / 1 / 3 / 1;
+}
+
+.about-image8 {
+    grid-area: 1 / 2 / 3 / 2;
+    margin: 0 0 40% 0;
 }
