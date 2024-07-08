@@ -155,7 +155,7 @@ p a {
     position: relative;
     top: 0;
     width: 100vw;
-    z-index: 1;
+    z-index: 100;
 }
 
 .navLink {
@@ -182,7 +182,7 @@ p a {
     background-color: rgb(57, 134, 230);
     overflow: hidden;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-    z-index: 1;
+    z-index: 101;
     transition: 0.5s;
     white-space: nowrap;
 }
@@ -311,29 +311,18 @@ p a {
 }
 
 /* Labels */
-.label-right {
-    z-index: 10;
-    font-size: 2vw;
+.label-right, .label-left {
+    font-size: 3vw;
     position: absolute;
-    border: 3px solid black;
+    border: 2px solid black;
     background: white;
     border-radius: 10px;
-    padding: 0 10px 0 0;
+    padding: 0 10px 0 5px;
 }
 
 .label-right a, .label-left a{
     text-decoration: none;
     color: inherit;
-}
-
-.label-left {
-    z-index: 10;
-    font-size: 2vw;
-    position: absolute;
-    border: 3px solid black;
-    background: white;
-    border-radius: 10px;
-    padding: 0 10px 0 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -408,7 +397,7 @@ p a {
 .child {
     display: block;
     height: 100%;
-    text-align: justify;
+    text-align: left;
     padding: 2vw 0;
 }
 
@@ -442,6 +431,7 @@ p a {
     .child {
         display: grid;
         grid-template-columns: 50% 50%;
+        text-align: justify;
     }
 
     .child img {
@@ -453,7 +443,7 @@ p a {
 .charts {
     display: grid;
     grid-template-columns: 50% 50%;
-    text-align: justify;
+    text-align: left;
     margin: 0 6vw;
 }
 
@@ -485,6 +475,9 @@ p a {
 }
 
 @media only screen and (min-width: 768px) {
+    .charts {
+        text-align: justify;
+    }
     .machine-learning-chart > img {
         width: 47%;
         margin: 0 1%;
@@ -573,7 +566,7 @@ p a {
     opacity: 0;
 }
 
-.language-explanation:active {
+.language-explanation:hover {
     transform: rotate(0deg);
     opacity: 1;
 }
@@ -638,7 +631,7 @@ p a {
 /* ABOUT ======================================= */
 #about-page p {
     padding: 3vw;
-    margin: 5%;
+    margin: 0 5%;
 }
 
 .about-gallery {
@@ -673,13 +666,8 @@ p a {
     }
 }
 
-#about-page img:hover {
-    filter: brightness(0.3);
-}
-
 [class*=about-image] {
     position: relative;
-    color: rgba(255,255,255,0);
     transition: all linear 0.2s;
 }
 
@@ -688,13 +676,29 @@ p a {
 }
 
 [class*=about-image] > p {
-    position: absolute;
     top: 0;
     left: 0;
 }
 
 [class*=about-image] {
     position: relative;
+}
+
+.about-description {
+    position: absolute;
+    top: 0; left: 0;
+    width: 90%;
+    margin: 0 5%;
+    color: transparent;
+    background-color: transparent;
+    height: 99%;
+    border-radius: 5%;
+}
+
+.about-description:hover {
+    color: white;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .about-image1 {
