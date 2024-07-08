@@ -383,11 +383,12 @@ p a {
 .slide-container {
     display: grid;
     grid-template-columns: 10vw 80vw 10vw;
-    align-items: center;
-    background-color: white;
+    /* align-items: center; */
+    height: 135vh;
 }
 #leftButton, #rightButton {
     width: 100%;
+    align-self: center;
 }
 
 .grandparent {
@@ -399,15 +400,16 @@ p a {
     display: grid;
     grid-template-columns: 70vw 70vw 70vw 70vw 70vw 70vw;
     width: 600%;
+    height: 100%;
     column-gap: 10vw;
-    padding: 5% 5vw;
+    padding: 0 5vw;
 }
       
 .child {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-items: center;
+    display: block;
+    height: 100%;
     text-align: justify;
+    padding: 2vw 0;
 }
 
 .child > img {
@@ -417,14 +419,13 @@ p a {
 
 .child p {
     padding: 0 5%;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: fit-content;
 }
 
-.charts {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    row-gap: 10px;
-    column-gap: 20px;
-    text-align: justify;
+.title-slide-text {
+    margin: 2vw;
 }
 
 .data-analysis-chart {
@@ -433,20 +434,46 @@ p a {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
 }
 
-@media only screen and (max-width: 768px) {
-    .child {
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
+@media only screen and (min-width: 768px) {
+    .slide-container {
+        height: 70vh;
     }
 
-    .child p {
-        padding: 0;
-        overflow: auto;
+    .child {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .child img {
+        width: 70%;
     }
 }
 
+/* MACHINE LEARNING =========== */
+.charts {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: justify;
+    margin: 0 6vw;
+}
+
+.charts > *:nth-child(4n+3), .charts > *:nth-child(4n+4) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.charts > *:nth-child(4n+3) {
+    border-left: 1vw solid skyblue;
+}
+
 .machine-learning-chart {
-    width: 49%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.machine-learning-chart > img {
+    width: 95%;
     border-radius: 5px;
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
 }
@@ -454,7 +481,14 @@ p a {
 .chart-text {
     display: flex;
     align-items: center;
-    padding: 0 0vw;
+    padding: 2vw 3vw;
+}
+
+@media only screen and (min-width: 768px) {
+    .machine-learning-chart > img {
+        width: 47%;
+        margin: 0 1%;
+    }
 }
 
 /* GAME DESIGN ============= */
@@ -492,10 +526,6 @@ p a {
     text-align: center;
 }
 
-.sbs {
-    width: 48%;
-}
-
 .writeup {
     background-color:white;
 }
@@ -504,7 +534,7 @@ p a {
     padding: 30vh 3vw;
 }
 
-/* Web Design pics */
+/* Web Design pics ========== */
 .webdes-container {
     position: relative;
     top: 0;

@@ -41,7 +41,7 @@
     <h1 class="title">MY PORTFOLIO <hr></h1>
 
     <h2 class="title">MACHINE LEARNING</h2> <!-- ----------------------------------------------------------------------- -->
-    <div class="charts block">
+    <div class="charts">
         <h2 style="text-align: center;">
             Computer Vision: Classification Problem
         </h2>
@@ -59,11 +59,14 @@
             of the training data, 500 iterations of gradient descent, 0.1 learning rate, and ReLU as an activation function. As seen on the right, the average
             prediction accuracies on the training and testing data are 91% and 81% respectively.
         </p>
-        <img src="images/ANN/initial_accuracies.png" alt="Data plot" class="machine-learning-chart">
 
-        <div>
-            <img src="images/ANN/train_and_iter1.png" alt="Graph showing accuracy when varying iterations and training sample size up to 10k" class="machine-learning-chart sbs">
-            <img src="images/ANN/train_and_iter2.png" alt="Graph showing accuracy when varying iterations and training sample size up to 10k" class="machine-learning-chart sbs">
+        <div class="machine-learning-chart" >
+            <img src="images/ANN/initial_accuracies.png" alt="Data plot">
+        </div>
+
+        <div class="machine-learning-chart" >
+            <img src="images/ANN/train_and_iter1.png" alt="Graph showing accuracy when varying iterations and training sample size up to 10k">
+            <img src="images/ANN/train_and_iter2.png" alt="Graph showing accuracy when varying iterations and training sample size up to 10k">
         </div>
         <p class="chart-text">
             I then ran another series of trials varying the number of iterations of gradient descent, as well as the size of the training data subset. We find, pretty
@@ -79,12 +82,14 @@
             hyperparameters, I reran the test varying the learning rate instead between 0.01 and 0.1, as shown in the graph on the right. This seems to confirm there is 
             indeed a "tipping point" around 0.04. I also tested 0.9 to 0.99 in a similar fashion but found similar output to the first test.
         </p>
-        <div>
-            <img src="images/ANN/learning_rates.png" alt="Learning rate comparison." class="machine-learning-chart">
-            <img src="images/ANN/learning_rates2.png" alt="Learning rate comparison." class="machine-learning-chart">
+        <div class="machine-learning-chart" >
+            <img src="images/ANN/learning_rates.png" alt="Learning rate comparison.">
+            <img src="images/ANN/learning_rates2.png" alt="Learning rate comparison.">
         </div>
 
-        <img class="machine-learning-chart" style="margin: auto 0 auto auto;" src="images/ANN/generations.png" alt="Generation count comparison.">
+        <div class="machine-learning-chart">
+            <img style="margin: auto 0 auto auto;" src="images/ANN/generations.png" alt="Generation count comparison.">
+        </div>
         <div class="chart-text">
             <p>
                 However, since smaller learning rates require more generations,
@@ -104,14 +109,16 @@
                 requires significantly more generations, for example.
             </p>
         </div>
-        <div>
-            <img class="machine-learning-chart" src="images/ANN/twolayer_train_and_iter2.png" alt="Performance graph of two hidden layers.">
-            <img class="machine-learning-chart" src="images/ANN/threelayers.png" alt="Performance graph of three hidden layers.">
+        <div class="machine-learning-chart" >
+            <img src="images/ANN/twolayer_train_and_iter2.png" alt="Performance graph of two hidden layers.">
+            <img src="images/ANN/threelayers.png" alt="Performance graph of three hidden layers.">
         </div>
 
-        <img class="machine-learning-chart" style="margin: auto 0 auto auto;" src="images/ANN/threelayer_generations.png" alt="">
+        <div class="machine-learning-chart" >
+            <img style="margin: auto 0 auto auto;" src="images/ANN/threelayer_generations.png" alt="">
+        </div>
         <div>
-            <p>
+            <p class="chart-text">
                 Since previous trials seem to show similar performance with training data samples of 2500 and 40000, I went with 2500, a learning rate of 0.1, and then
                 varied the generations from 1000 to 75000. Evidently, My hypothesis was wrong, at least in the case of this neural network. There could be many reasons
                 for the low accuracy, from misintegrating the third layer to needing to dial in other hyperparameters. Since I only did one run of each generation
