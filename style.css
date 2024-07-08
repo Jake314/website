@@ -74,8 +74,8 @@ p a {
 }
 
 @keyframes background-glow {
-    0% {background-color: rgb(84, 152, 255);}
-    80% {background-color: rgb(84, 152, 255);}
+    0% {background-color: #103A6F;}
+    80% {background-color: #103A6F;}
     100% {background-color: rgba(255, 241, 111, 0.2);}
 }
 
@@ -577,24 +577,26 @@ p a {
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 34vw 66vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 100vw;
+    }
 }
 
 .lsection {
-    flex-basis: 33%;
-    background-color: rgb(84, 152, 255);
+    background-color: #103A6F;
+    color: white;
 }
 
 .lsection h2 {
     padding: 0 5%;
-    /* text-decoration-line: underline; */
     border-bottom: 2px rgba(0, 0, 0, 0.2) solid;
-    border-radius: 100px;
+    border-radius: 10px;
 }
-
-/* .lsection h2:after {
-    content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
-} */
 
 .lsection a {
     color: white;
@@ -605,19 +607,18 @@ p a {
 }
 
 .rsection {
-    flex-basis: 67%;
-    background-color: rgb(145, 189, 255);
+    background-color: white;
 }
 
 .rsection h2 {
     padding: 0 10%;
     margin: 0;
-    background-color: rgb(84, 152, 255);
+    background-color: #d9f9fc;
     border-bottom: 2px rgba(0, 0, 0, 0.2) solid;
 }
 
 .rsection h3 {
-    background-color: rgb(139, 186, 255);
+    background-color: #F0F9FA;
     padding: 0 2%;
     margin: 0;
 }
