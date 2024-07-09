@@ -22,6 +22,10 @@ h1 {
     margin: 2vw
 }
 
+footer {
+    background-color: #5b96df95;
+}
+
 /* .blocked {
     color: black;
     margin-left: 4vw;
@@ -313,7 +317,8 @@ p a {
 
 /* Labels */
 .label-right, .label-left {
-    font-size: 3vw;
+    z-index: 1;
+    font-size: 2.3vw;
     position: absolute;
     border: 2px solid black;
     background: white;
